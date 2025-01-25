@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8711599804902776244
+--- !u!1001 &1068833021526338428
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -15,10 +15,6 @@ PrefabInstance:
     - target: {fileID: 4557213151296698411, guid: b631db850b8a9554cbc008850b908628, type: 3}
       propertyPath: m_Name
       value: FacebookBubble
-      objectReference: {fileID: 0}
-    - target: {fileID: 6709157146440776173, guid: b631db850b8a9554cbc008850b908628, type: 3}
-      propertyPath: m_BodyType
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7316183905379007819, guid: b631db850b8a9554cbc008850b908628, type: 3}
       propertyPath: m_LocalPosition.x

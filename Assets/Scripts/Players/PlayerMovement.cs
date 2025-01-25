@@ -39,12 +39,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(up))
         {
-            nozzle.transform.Rotate(0f, 0f, rotationSpeed, Space.Self);
+            nozzle.transform.Rotate(0f, 0f, -rotationSpeed, Space.Self);
         }
 
         if (Input.GetKey(down))
         {
-            nozzle.transform.Rotate(0f, 0f, -rotationSpeed, Space.Self);
+            nozzle.transform.Rotate(0f, 0f, rotationSpeed, Space.Self);
         }
     }
 }

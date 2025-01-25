@@ -27,22 +27,22 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(left))
+        if (Input.GetKey(left))
         {
             rb.velocity = new Vector2(-moveSpeed, 0f);
         }
 
-        if (Input.GetKeyDown(right))
+        if (Input.GetKey(right))
         {
             rb.velocity = new Vector2(moveSpeed, 0f);
         }
 
-        if (Input.GetKeyDown(up))
+        if (Input.GetKey(up))
         {
             nozzle.transform.Rotate(0f, 0f, rotationSpeed, Space.Self);
         }
 
-        if (Input.GetKeyDown(up))
+        if (Input.GetKey(down))
         {
             nozzle.transform.Rotate(0f, 0f, -rotationSpeed, Space.Self);
         }

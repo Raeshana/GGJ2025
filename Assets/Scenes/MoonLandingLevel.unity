@@ -1164,6 +1164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 3216221918600086726, guid: 5097d05abbbf7f342baa095056a57cea, type: 3}
+      propertyPath: rotationSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5746533950715567984, guid: 5097d05abbbf7f342baa095056a57cea, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 136

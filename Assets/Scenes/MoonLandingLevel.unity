@@ -483,10 +483,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 4557213151296698411, guid: b631db850b8a9554cbc008850b908628, type: 3}
-  waitTime: 2
+  spawnInterval: 5
+  spawnLength: 8
   transforms:
   - {fileID: 613264983}
   - {fileID: 89458522}
+  - {fileID: 810580568}
+  - {fileID: 1241969056}
+  - {fileID: 902775629}
+  - {fileID: 349353079}
+  - {fileID: 1414413295}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

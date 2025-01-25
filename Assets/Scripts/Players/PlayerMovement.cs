@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Nozzle")]
+    [SerializeField] GameObject nozzle;
+
     [Header("Speed")]
     [SerializeField] float moveSpeed;
-    [SerializeField] float RotationSpeed;
+    [SerializeField] float rotationSpeed;
 
     [Header("Keybinds")]
     [SerializeField] KeyCode left;
@@ -32,6 +35,16 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(right))
         {
             rb.velocity = new Vector2(moveSpeed, 0f);
+        }
+
+        if (Input.GetKeyDown(up))
+        {
+            nozzle.transform.Rotate(0f, 0f, rotationSpeed, Space.Self);
+        }
+
+        if (Input.GetKeyDown(up))
+        {
+            nozzle.transform.Rotate(0f, 0f, -rotationSpeed, Space.Self);
         }
     }
 }

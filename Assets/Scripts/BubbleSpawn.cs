@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class BubbleSpawn : MonoBehaviour
 {
-    [SerializeField] GameObject bubblePrefab;
     [SerializeField] float spawnInterval;
     [SerializeField] float spawnLength;
+
+    [SerializeField] GameObject[] bubblePrefabs;
     [SerializeField] Transform[] transforms;
     
     // Update is called once per frame
@@ -23,13 +24,14 @@ public class BubbleSpawn : MonoBehaviour
     private IEnumerator BubbleSpawnCoroutine()
     {
         while (true) {
-            // Get random index in transforms
-            int point = Random.Range(0, transforms.Length-1); 
+            // Get random indexes in transforms and bubblePrefabs
+            int transformPoint = Random.Range(0, transforms.Length-1); 
+            int bubbleType = Random.Range(0, bubblePrefabs.Length-1); 
 
             yield return new WaitForSeconds(spawnInterval);
 
             // Instantiate bubble at transforms[index]
-            GameObject bubble = Instantiate(bubblePrefab, transforms[point].position, Quaternion.identity); 
+            GameObject bubble = Instantiate(bubblePrefabs[bubbleType], transforms[transformPoint].position, Quaternion.identity); 
 
             // Reduces overhead by deleting bubble once offscrean
             StartCoroutine(BubbleDestroyCoroutine(bubble));

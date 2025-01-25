@@ -482,9 +482,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f196726fe8f2f2b4e8fcad61876e4a23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 4557213151296698411, guid: b631db850b8a9554cbc008850b908628, type: 3}
-  spawnInterval: 5
+  spawnInterval: 3
   spawnLength: 8
+  bubblePrefabs:
+  - {fileID: 5177917922190861727, guid: 88109085ea7905644bbea0309cb2070c, type: 3}
+  - {fileID: 6328034020537390777, guid: 97c235da41710bc4d8440b21e351c2e3, type: 3}
+  - {fileID: 7582608943372464609, guid: e50ab37c85883744b9394dac36e984e4, type: 3}
+  - {fileID: 3759410900583245890, guid: 268d6626e2224e94b8a843e439b241a8, type: 3}
   transforms:
   - {fileID: 613264983}
   - {fileID: 89458522}

@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class BubbleSpawn : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject bubblePrefab;
+    [SerializeField] float waitTime;
+    [SerializeField] Transform[] transforms;
+    
+    // Update is called once per frame
     void Start()
     {
-        
+        StartCoroutine(BubbleSpawnCoroutine());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator BubbleSpawnCoroutine()
     {
-        
+        while (true) {
+            yield return new WaitForSeconds(waitTime);
+            Instantiate(bubblePrefab, transforms[0].position, Quaternion.identity);
+        }
     }
 }

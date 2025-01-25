@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BubbleMovement : MonoBehaviour
 {
-    private Rigidbody2D rigidbody2D;
+    private Rigidbody2D rb;
     [SerializeField] float speed;
     
     void Start() {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate() {
-        rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, speed);
+        rb.velocity = new Vector2(rb.velocity.x, speed);
     }
 }

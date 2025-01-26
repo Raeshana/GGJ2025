@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Headlines : MonoBehaviour
 {
-    public RectTransform blueHeadlines;
-    public RectTransform redHeadlines;
+    // public RectTransform blueHeadlines;
+    // public RectTransform redHeadlines;
 
-    // public GameObject blueCollider;
-    // public GameObject redCollider;
+    public GameObject blueCollider;
+    public GameObject redCollider;
 
     [Range(0f, 1f)]
     public float blueScore = 0.5f;
-    private float previousBlueScore;
+    // private float previousBlueScore;
     private float leftMargin = Screen.width * 0.05f;
     private float textWidth; // Text width is 90% of desktop width
 
@@ -20,35 +20,35 @@ public class Headlines : MonoBehaviour
     void Start()
     {
         blueScore = 0.5f;
-        previousBlueScore = -1f;
+        // previousBlueScore = -1f;
         textWidth = Screen.width * 0.9f; // initialize text width
-        UpdateHeadlines();
+        // UpdateHeadlines();
 
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        // Update headlines only if blueScore changes
-        if (Mathf.Abs(blueScore - previousBlueScore) > Mathf.Epsilon)
-        {
-            UpdateHeadlines();
-            previousBlueScore = blueScore;
-        }
-    }
+    // void Update()
+    // {
+    //     // Update headlines only if blueScore changes
+    //     if (Mathf.Abs(blueScore - previousBlueScore) > Mathf.Epsilon)
+    //     {
+    //         UpdateHeadlines();
+    //         previousBlueScore = blueScore;
+    //     }
+    // }
 
-    void UpdateHeadlines()
-    {
-        float redScore = 1f - blueScore;
-        blueHeadlines.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, blueScore * textWidth);
-        blueHeadlines.anchoredPosition = new Vector2(leftMargin, blueHeadlines.anchoredPosition.y);
+    // void UpdateHeadlines()
+    // {
+    //     float redScore = 1f - blueScore;
+    //     blueHeadlines.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, blueScore * textWidth);
+    //     blueHeadlines.anchoredPosition = new Vector2(leftMargin, blueHeadlines.anchoredPosition.y);
 
-        redHeadlines.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, redScore * textWidth);
-        redHeadlines.anchoredPosition = new Vector2(leftMargin + blueHeadlines.rect.width, redHeadlines.anchoredPosition.y);
+    //     redHeadlines.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, redScore * textWidth);
+    //     redHeadlines.anchoredPosition = new Vector2(leftMargin + blueHeadlines.rect.width, redHeadlines.anchoredPosition.y);
 
-        // UpdateCollider(blueCollider, blueHeadlines);
-        // UpdateCollider(redCollider, redHeadlines);
-    }
+    //     // UpdateCollider(blueCollider, blueHeadlines);
+    //     // UpdateCollider(redCollider, redHeadlines);
+    // }
 
     // void UpdateCollider(GameObject colliderObject, RectTransform rectTransform)
     // {

@@ -316,6 +316,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueTwitterBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 4557213151296698411, guid: b631db850b8a9554cbc008850b908628, type: 3}
+      propertyPath: m_TagString
+      value: Blue
+      objectReference: {fileID: 0}
     - target: {fileID: 5974167718157059959, guid: b631db850b8a9554cbc008850b908628, type: 3}
       propertyPath: m_Enabled
       value: 0

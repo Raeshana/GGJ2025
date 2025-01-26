@@ -508,9 +508,11 @@ GameObject:
   - component: {fileID: 332636265}
   - component: {fileID: 332636264}
   - component: {fileID: 332636266}
+  - component: {fileID: 332636267}
+  - component: {fileID: 332636268}
   m_Layer: 0
   m_Name: RedCollider
-  m_TagString: Untagged
+  m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -627,6 +629,38 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &332636267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332636263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5d69b25db0f425dbfafb4503a5cab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headlineMovement: {fileID: 332636268}
+  blueCounter: 0
+  redCounter: 0
+  blueText: {fileID: 0}
+  redText: {fileID: 0}
+--- !u!114 &332636268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 332636263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2e1d3877af324a09b2e3b50db8f7dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueCollider: {fileID: 2135271659}
+  redCollider: {fileID: 332636263}
+  blueScore: 0.5
 --- !u!1 &349353078
 GameObject:
   m_ObjectHideFlags: 0
@@ -693,7 +727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 85, y: 385}
+  m_AnchoredPosition: {x: 1027, y: 385}
   m_SizeDelta: {x: 875, y: 122}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &422489947
@@ -745,13 +779,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422489945}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2e1d3877af324a09b2e3b50db8f7dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blueHeadlines: {fileID: 0}
-  redHeadlines: {fileID: 0}
+  blueCollider: {fileID: 0}
+  redCollider: {fileID: 0}
   blueScore: 0.48
 --- !u!1 &519420028
 GameObject:
@@ -1260,7 +1294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -893, y: -156}
+  m_AnchoredPosition: {x: -1773, y: -156}
   m_SizeDelta: {x: 875, y: 122}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1247327536
@@ -1744,9 +1778,10 @@ GameObject:
   - component: {fileID: 2135271662}
   - component: {fileID: 2135271661}
   - component: {fileID: 2135271660}
+  - component: {fileID: 2135271663}
   m_Layer: 0
   m_Name: BlueCollider
-  m_TagString: Untagged
+  m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1863,6 +1898,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2135271663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135271659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa5d69b25db0f425dbfafb4503a5cab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headlineMovement: {fileID: 0}
+  blueCounter: 0
+  redCounter: 0
+  blueText: {fileID: 0}
+  redText: {fileID: 0}
 --- !u!1001 &1046150320285474166
 PrefabInstance:
   m_ObjectHideFlags: 0

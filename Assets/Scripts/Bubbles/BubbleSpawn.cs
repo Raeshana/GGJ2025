@@ -38,11 +38,6 @@ public class BubbleSpawn : MonoBehaviour
             // Instantiate bubble at transforms[index]
             GameObject bubble = Instantiate(bubblePrefabs[bubbleType], transforms[transformPoint].position, Quaternion.identity); 
 
-            Renderer bubbleRenderer = bubble.GetComponent<Renderer>();
-            if (bubbleRenderer) {
-                bubbleRenderer.material.color = category == 0 ? Color.red : Color.blue;
-            }
-
             // Reduces overhead by deleting bubble once offscrean
             StartCoroutine(BubbleDestroyCoroutine(bubble));
         }

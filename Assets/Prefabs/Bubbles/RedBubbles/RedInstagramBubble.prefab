@@ -8,9 +8,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 806306292125131873, guid: b631db850b8a9554cbc008850b908628, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 806306292125131873, guid: b631db850b8a9554cbc008850b908628, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 806306292125131873, guid: b631db850b8a9554cbc008850b908628, type: 3}
+      propertyPath: m_Color.r
+      value: 0.63529414
+      objectReference: {fileID: 0}
     - target: {fileID: 4557213151296698411, guid: b631db850b8a9554cbc008850b908628, type: 3}
       propertyPath: m_Name
-      value: Bubble
+      value: RedInstagramBubble
       objectReference: {fileID: 0}
     - target: {fileID: 7316183905379007819, guid: b631db850b8a9554cbc008850b908628, type: 3}
       propertyPath: m_LocalPosition.x

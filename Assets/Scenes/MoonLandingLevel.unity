@@ -1190,11 +1190,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnInterval: 3
   spawnLength: 8
-  bubblePrefabs:
+  bubbleRedPrefabs:
   - {fileID: 3597031189439828823, guid: 88109085ea7905644bbea0309cb2070c, type: 3}
   - {fileID: 6328034020537390777, guid: 97c235da41710bc4d8440b21e351c2e3, type: 3}
   - {fileID: 7582608943372464609, guid: e50ab37c85883744b9394dac36e984e4, type: 3}
   - {fileID: 3759410900583245890, guid: 268d6626e2224e94b8a843e439b241a8, type: 3}
+  bubbleBluePrefabs:
+  - {fileID: 3597031189439828823, guid: 85b685d297d7e4c8dbded554325a9a92, type: 3}
+  - {fileID: 6328034020537390777, guid: ab1c176bfc9bd4f86a279f4ec722c4b3, type: 3}
+  - {fileID: 7582608943372464609, guid: bd0fcae9cb8e444a6b2ac70ebebd57a1, type: 3}
+  - {fileID: 3759410900583245890, guid: 036c211d0ab584b8e8d044d935a1fd81, type: 3}
   transforms:
   - {fileID: 613264983}
   - {fileID: 89458522}

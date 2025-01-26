@@ -7,8 +7,10 @@ public class BubbleSpawn : MonoBehaviour
     [SerializeField] float spawnInterval;
     [SerializeField] float spawnLength;
 
-    [SerializeField] GameObject[] bubblePrefabs;
+    [SerializeField] GameObject[] bubbleRedPrefabs;
+    [SerializeField] GameObject[] bubbleBluePrefabs;
     [SerializeField] Transform[] transforms;
+
     
     // Update is called once per frame
     void Start()
@@ -26,6 +28,9 @@ public class BubbleSpawn : MonoBehaviour
         while (true) {
             // Get random indexes in transforms and bubblePrefabs
             int transformPoint = Random.Range(0, transforms.Length-1); 
+
+            int category = Random.Range(0, 2);
+            GameObject[] bubblePrefabs = category == 0 ? bubbleRedPrefabs : bubbleBluePrefabs;
             int bubbleType = Random.Range(0, bubblePrefabs.Length-1); 
 
             yield return new WaitForSeconds(spawnInterval);

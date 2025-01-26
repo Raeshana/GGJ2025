@@ -8,8 +8,9 @@ public class HeadlineCollision : MonoBehaviour
 
     void Start() {
         headlineMovement.blueScore = 0.5f;
-        Debug.Log("headlineCollision");
+        Debug.Log("headlineCollision started");
     }
+
 
     private void OnTriggerEnter(Collider other)
     {

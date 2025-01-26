@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeadLineMovement : MonoBehaviour
+public class Headlines : MonoBehaviour
 {
     public RectTransform blueHeadlines;
     public RectTransform redHeadlines;
 
+    // public GameObject blueCollider;
+    // public GameObject redCollider;
+
     [Range(0f, 1f)]
-    public float blueScore;
+    public float blueScore = 0.5f;
     private float previousBlueScore;
     private float leftMargin = Screen.width * 0.05f;
     private float textWidth; // Text width is 90% of desktop width
@@ -20,6 +23,7 @@ public class HeadLineMovement : MonoBehaviour
         previousBlueScore = -1f;
         textWidth = Screen.width * 0.9f; // initialize text width
         UpdateHeadlines();
+
     }
 
     // Update is called once per frame
@@ -41,23 +45,30 @@ public class HeadLineMovement : MonoBehaviour
 
         redHeadlines.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, redScore * textWidth);
         redHeadlines.anchoredPosition = new Vector2(leftMargin + blueHeadlines.rect.width, redHeadlines.anchoredPosition.y);
+
+        // UpdateCollider(blueCollider, blueHeadlines);
+        // UpdateCollider(redCollider, redHeadlines);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // Check if the object that collides is a bubble
-        if (other.CompareTag("Red") && gameObject.CompareTag("Red"))
-        {
-            blueScore--;
-            Debug.Log("Red bubble hit RedHeadline! Decreasing blueScore. New blueScore: " + blueScore);
-        }
-        else if (other.CompareTag("Blue") && gameObject.CompareTag("Blue"))
-        {
-            blueScore++;
-            Debug.Log("Blue bubble hit BlueHeadline! Increasing blueScore. New blueScore: " + blueScore);
-        }
+    // void UpdateCollider(GameObject colliderObject, RectTransform rectTransform)
+    // {
+    //     // Convert RectTransform position to world position
+    //     Vector3 worldPosition = rectTransform.position;
 
-        // Optionally, destroy the bubble after it interacts with the headline
-        Destroy(other.gameObject);
-    }
+    //     // Get the BoxCollider component
+    //     BoxCollider collider = colliderObject.GetComponent<BoxCollider>();
+
+    //     if (collider != null)
+    //     {
+    //         // Update collider position and size
+    //         colliderObject.transform.position = worldPosition;
+
+    //         // Convert UI dimensions to world space dimensions
+    //         float colliderWidth = rectTransform.rect.width * rectTransform.lossyScale.x;
+    //         float colliderHeight = rectTransform.rect.height * rectTransform.lossyScale.y;
+
+    //         collider.size = new Vector3(colliderWidth, colliderHeight, 0.1f); // Small Z-axis depth
+    //         collider.center = new Vector3(colliderWidth / 2f, -colliderHeight / 2f, 0f); // Adjust to anchor from top-left
+    //     }
+    // }
 }

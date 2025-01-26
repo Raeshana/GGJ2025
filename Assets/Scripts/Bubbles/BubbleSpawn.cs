@@ -39,6 +39,7 @@ public class BubbleSpawn : MonoBehaviour
             GameObject bubble = Instantiate(bubblePrefabs[bubbleType], transforms[transformPoint].position, Quaternion.identity);
             string[] bubbleTags = {"Blue", "Red"};
             bubble.tag = bubbleTags[isRed]; 
+            Debug.Log("bubble: " + bubble.tag);
 
             // Reduces overhead by deleting bubble once offscrean
             StartCoroutine(BubbleDestroyCoroutine(bubble));

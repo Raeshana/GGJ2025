@@ -40,19 +40,19 @@ public class HeadlineColliderMovement : MonoBehaviour
         float redScore = 1f - blueScore;
 
         // Update BlueCollider size and position
-        if (BlueCollider != null)
-        {
+        // if (BlueCollider != null)
+        // {
             BlueCollider.transform.localScale = new Vector3(blueScore * textWidth, BlueCollider.transform.localScale.y, BlueCollider.transform.localScale.z);
             BlueCollider.transform.position = new Vector3(leftMargin + (BlueCollider.transform.localScale.x / 2), BlueCollider.transform.position.y, BlueCollider.transform.position.z);
-        }
+        // }
 
         // Update RedCollider size and position
-        if (RedCollider != null)
-        {
+        // if (RedCollider != null)
+        // {
             RedCollider.transform.localScale = new Vector3(redScore * textWidth, RedCollider.transform.localScale.y, RedCollider.transform.localScale.z);
             RedCollider.transform.position = new Vector3(leftMargin + (BlueCollider.transform.localScale.x) + (RedCollider.transform.localScale.x / 2), RedCollider.transform.position.y, RedCollider.transform.position.z);
-        }
-        
+        // }
+
         // blueHeadlines.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, blueScore * textWidth);
         // blueHeadlines.anchoredPosition = new Vector2(leftMargin, blueHeadlines.anchoredPosition.y);
 

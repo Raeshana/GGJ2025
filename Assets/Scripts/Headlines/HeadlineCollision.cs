@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HeadlineCollision : MonoBehaviour
 {
@@ -42,11 +43,17 @@ public class HeadlineCollision : MonoBehaviour
         {
             redCounter++;
             redText.text = "" + redCounter; 
+            if (redCounter == 5) {
+                SceneManager.LoadScene("RedWinScene", LoadSceneMode.Single);
+            }
         }
         else if (other.CompareTag("Blue") && gameObject.CompareTag("Blue"))
         {
             blueCounter++;
             blueText.text = "" + blueCounter; 
+            if (blueCounter == 5) {
+                SceneManager.LoadScene("BlueWinScene", LoadSceneMode.Single);
+            }
         }
 
         // Optionally, destroy the bubble after it interacts with the headline

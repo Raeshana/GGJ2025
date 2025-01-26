@@ -11,7 +11,7 @@ public class ChangeSprite : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Get random indexes in transforms and bubblePrefabs
+        // Get random indexes in sprites
         int spriteIndex = Random.Range(0, sprites.Length); 
         sr.sprite = sprites[spriteIndex];
     }

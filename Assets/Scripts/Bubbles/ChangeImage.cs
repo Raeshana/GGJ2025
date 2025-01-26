@@ -11,7 +11,7 @@ public class ChangeImage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Get random indexes in transforms and bubblePrefabs
+        // Get random indexes in images
         int imageIndex = Random.Range(0, images.Length); 
         Image.sprite = images[imageIndex];
     }

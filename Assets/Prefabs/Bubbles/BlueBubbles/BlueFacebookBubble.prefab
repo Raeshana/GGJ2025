@@ -572,6 +572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueFacebookBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 5974167718157059959, guid: b631db850b8a9554cbc008850b908628, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7316183905379007819, guid: b631db850b8a9554cbc008850b908628, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

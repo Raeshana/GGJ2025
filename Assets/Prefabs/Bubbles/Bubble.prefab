@@ -174,6 +174,8 @@ GameObject:
   - component: {fileID: 2127775893041361295}
   - component: {fileID: 6395271519888363485}
   - component: {fileID: 8626809223640350969}
+  - component: {fileID: 5974167718157059959}
+  - component: {fileID: 1220134158129274011}
   m_Layer: 5
   m_Name: Message
   m_TagString: Untagged
@@ -297,6 +299,60 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5974167718157059959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7160780167726607047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7054b6dbb2efe648aac7c82a7d03b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 8626809223640350969}
+  messages:
+  - The landing was obvi faked lol
+  - "The astronauts didn\u2019t land on the Moon?????"
+  - You must have 0 braincells to think the Apollo mission was real
+  - Apollo was a fraud!
+  - Can't you see how badly photoshopped those photos are?
+  - I could probably use photoshop better than NASA lolll
+  - NASA hid their old Apollo photo page
+  - its obvious NASA spliced two photos into one
+  - I can see a studio light in the photo?? lmao
+  - Why is the flag standing??
+  - NASA faked the landing to win the Space Race
+  - The chance of a successful landing is 0.0017%
+  - "It\u2019s easier to fake the landings than to really go there"
+--- !u!114 &1220134158129274011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7160780167726607047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7054b6dbb2efe648aac7c82a7d03b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 8626809223640350969}
+  messages:
+  - Japan literally photographed the moon landing traces
+  - Japan recorded the disturbed soil at the Apollo site
+  - "China\u2019s probe spotted the Apollo landings"
+  - "South Korea\u2019s probe imaged Apollo\u2019s landing site"
+  - "India orbiter captured Apollo\u2019s descent stage"
+  - UK astronauts photographed a fuel dump
+  - Images of the spacecraft were broadcast live
+  - Pic du Midi Observatory reported a sighting of the spacecraft
+  - Otto Struve Telescope observed a flashing object
+  - Sky & Telescope reported optical tracking of Apollo 8
+  - Many in Hawaii observed the trans-lunar injection burn
+  - "Chabot Observatory\u2019s telescope helps bring Apollo 13 home"
+  - Paul Wilson received voice transmissions from lunar orbit
 --- !u!1 &7958461965460887840
 GameObject:
   m_ObjectHideFlags: 0

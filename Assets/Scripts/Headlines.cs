@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeaderMovement : MonoBehaviour
+public class HeadLineMovement : MonoBehaviour
 {
-    public RectTransform blueHeader;
-    public RectTransform redHeader;
+    public RectTransform blueHeadlines;
+    public RectTransform redHeadlines;
 
     [Range(0f, 1f)]
     public float blueScore;
@@ -19,27 +19,27 @@ public class HeaderMovement : MonoBehaviour
         blueScore = 0.5f;
         previousBlueScore = -1f;
         textWidth = Screen.width * 0.9f; // initialize text width
-        UpdateHeaders();
+        UpdateHeadlines();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Update headers only if blueScore changes
+        // Update headlines only if blueScore changes
         if (Mathf.Abs(blueScore - previousBlueScore) > Mathf.Epsilon)
         {
-            UpdateHeaders();
+            UpdateHeadlines();
             previousBlueScore = blueScore;
         }
     }
 
-    void UpdateHeaders()
+    void UpdateHeadlines()
     {
         float redScore = 1f - blueScore;
-        blueHeader.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, blueScore * textWidth);
-        blueHeader.anchoredPosition = new Vector2(leftMargin, blueHeader.anchoredPosition.y);
+        blueHeadlines.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, blueScore * textWidth);
+        blueHeadlines.anchoredPosition = new Vector2(leftMargin, blueHeadlines.anchoredPosition.y);
 
-        redHeader.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, redScore * textWidth);
-        redHeader.anchoredPosition = new Vector2(leftMargin + blueHeader.rect.width, redHeader.anchoredPosition.y);
+        redHeadlines.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, redScore * textWidth);
+        redHeadlines.anchoredPosition = new Vector2(leftMargin + blueHeadlines.rect.width, redHeadlines.anchoredPosition.y);
     }
 }

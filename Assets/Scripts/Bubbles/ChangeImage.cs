@@ -12,7 +12,7 @@ public class ChangeImage : MonoBehaviour
     void Start()
     {
         // Get random indexes in transforms and bubblePrefabs
-        int imageIndex = Random.Range(0, images.Length-1); 
+        int imageIndex = Random.Range(0, images.Length); 
         Image.sprite = images[imageIndex];
     }
 }

@@ -27,11 +27,11 @@ public class BubbleSpawn : MonoBehaviour
     {
         while (true) {
             // Get random indexes in transforms and bubblePrefabs
-            int transformPoint = Random.Range(0, transforms.Length-1); 
+            int transformPoint = Random.Range(0, transforms.Length); 
 
             int category = Random.Range(0, 2);
             GameObject[] bubblePrefabs = category == 0 ? bubbleRedPrefabs : bubbleBluePrefabs;
-            int bubbleType = Random.Range(0, bubblePrefabs.Length-1); 
+            int bubbleType = Random.Range(0, bubblePrefabs.Length); 
 
             yield return new WaitForSeconds(spawnInterval);
 

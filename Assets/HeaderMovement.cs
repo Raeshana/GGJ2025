@@ -37,15 +37,9 @@ public class HeaderMovement : MonoBehaviour
     {
         float redScore = 1f - blueScore;
         blueHeader.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, blueScore * textWidth);
-        // blueHeader.anchoredPosition = new Vector2(0, blueHeader.anchoredPosition.y); // Ensure the blueHeader remains at the left edge
-        blueHeader.anchorMin = new Vector2(0, blueHeader.anchorMin.y);
-            blueHeader.anchorMax = new Vector2(0, blueHeader.anchorMax.y);
-            blueHeader.anchoredPosition = new Vector2(leftMargin, blueHeader.anchoredPosition.y);
+        blueHeader.anchoredPosition = new Vector2(leftMargin, blueHeader.anchoredPosition.y);
 
         redHeader.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, redScore * textWidth);
-        // redHeader.anchoredPosition = new Vector2(blueHeader.anchoredPosition.x + blueHeader.rect.width, redHeader.anchoredPosition.y); // Position redHeader just to the right of blueHeader
-        redHeader.anchorMin = new Vector2(0, redHeader.anchorMin.y);
-            redHeader.anchorMax = new Vector2(0, redHeader.anchorMax.y);
-            redHeader.anchoredPosition = new Vector2(leftMargin + blueHeader.rect.width, redHeader.anchoredPosition.y);
+        redHeader.anchoredPosition = new Vector2(leftMargin + blueHeader.rect.width, redHeader.anchoredPosition.y);
     }
 }

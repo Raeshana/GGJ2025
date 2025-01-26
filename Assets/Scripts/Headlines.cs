@@ -42,4 +42,22 @@ public class HeadLineMovement : MonoBehaviour
         redHeadlines.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, redScore * textWidth);
         redHeadlines.anchoredPosition = new Vector2(leftMargin + blueHeadlines.rect.width, redHeadlines.anchoredPosition.y);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Check if the object that collides is a bubble
+        if (other.CompareTag("Red") && gameObject.CompareTag("Red"))
+        {
+            blueScore--;
+            Debug.Log("Red bubble hit RedHeadline! Decreasing blueScore. New blueScore: " + blueScore);
+        }
+        else if (other.CompareTag("Blue") && gameObject.CompareTag("Blue"))
+        {
+            blueScore++;
+            Debug.Log("Blue bubble hit BlueHeadline! Increasing blueScore. New blueScore: " + blueScore);
+        }
+
+        // Optionally, destroy the bubble after it interacts with the headline
+        Destroy(other.gameObject);
+    }
 }

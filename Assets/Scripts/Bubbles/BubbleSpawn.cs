@@ -29,14 +29,16 @@ public class BubbleSpawn : MonoBehaviour
             // Get random indexes in transforms and bubblePrefabs
             int transformPoint = Random.Range(0, transforms.Length-1); 
 
-            int category = Random.Range(0, 2);
-            GameObject[] bubblePrefabs = category == 0 ? bubbleRedPrefabs : bubbleBluePrefabs;
+            int isRed = Random.Range(0, 2);
+            GameObject[] bubblePrefabs = isRed == 1 ? bubbleRedPrefabs : bubbleBluePrefabs;
             int bubbleType = Random.Range(0, bubblePrefabs.Length-1); 
 
             yield return new WaitForSeconds(spawnInterval);
 
             // Instantiate bubble at transforms[index]
-            GameObject bubble = Instantiate(bubblePrefabs[bubbleType], transforms[transformPoint].position, Quaternion.identity); 
+            GameObject bubble = Instantiate(bubblePrefabs[bubbleType], transforms[transformPoint].position, Quaternion.identity);
+            string[] bubbleTags = {"Blue", "Red"};
+            bubble.tag = bubbleTags[isRed]; 
 
             // Reduces overhead by deleting bubble once offscrean
             StartCoroutine(BubbleDestroyCoroutine(bubble));

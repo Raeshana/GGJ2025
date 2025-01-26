@@ -12,7 +12,7 @@ public class HeadlineCollision : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         // print the tag of the object that collided with the headline
         Debug.Log(gameObject.tag + "collided with: " + other.gameObject.tag);

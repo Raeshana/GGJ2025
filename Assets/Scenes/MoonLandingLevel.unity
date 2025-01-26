@@ -1422,7 +1422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInterval: 3
-  spawnLength: 8
+  spawnLength: 20
   bubbleRedPrefabs:
   - {fileID: 3597031189439828823, guid: 88109085ea7905644bbea0309cb2070c, type: 3}
   - {fileID: 6328034020537390777, guid: 97c235da41710bc4d8440b21e351c2e3, type: 3}

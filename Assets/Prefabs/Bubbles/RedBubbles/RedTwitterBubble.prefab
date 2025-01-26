@@ -361,6 +361,18 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 8626809223640350969, guid: b631db850b8a9554cbc008850b908628, type: 3}
+      propertyPath: m_margin.w
+      value: -2.3526297
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626809223640350969, guid: b631db850b8a9554cbc008850b908628, type: 3}
+      propertyPath: m_margin.x
+      value: -1.2790751
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626809223640350969, guid: b631db850b8a9554cbc008850b908628, type: 3}
+      propertyPath: m_margin.z
+      value: -34.413994
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626809223640350969, guid: b631db850b8a9554cbc008850b908628, type: 3}
       propertyPath: m_fontColor.b
       value: 0
       objectReference: {fileID: 0}
